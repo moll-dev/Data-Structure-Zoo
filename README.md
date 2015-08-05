@@ -11,13 +11,13 @@ The repository is laid out in a logical order and I suggest completing it in the
 
 
 #### Table of Contents
-- [1-Object-oriented Programming](https://github.com/QuantumFractal/Data-Structures-Zoo/tree/master/1-Object-Oriented%20Programming)
-- [2-Algorithm Analysis](https://github.com/QuantumFractal/Data-Structures-Zoo/tree/master/2-Algorithm%20Analysis)
-- [3-Sorting](https://github.com/QuantumFractal/Data-Structures-Zoo/tree/master/3-Sorting)
-- [4-Generics](https://github.com/QuantumFractal/Data-Structures-Zoo/tree/master/4-Generics)
-- [5-Collections and Iterators](https://github.com/QuantumFractal/Data-Structures-Zoo/tree/master/5-Collections%20and%20Iterators)
-- [6-Stack and its applications](https://github.com/QuantumFractal/Data-Structures-Zoo/tree/master/6-Stack%20and%20its%20applications)
-- [7-Queue](https://github.com/QuantumFractal/Data-Structures-Zoo/tree/master/7-Queue)
-- [8-Tree](https://github.com/QuantumFractal/Data-Structures-Zoo/tree/master/8-Tree)
-- [9-Map](https://github.com/QuantumFractal/Data-Structures-Zoo/tree/master/9-Map)
-- [10-Graphs](https://github.com/QuantumFractal/Data-Structures-Zoo/tree/master/10-Graphs)
+1. [Object-oriented Programming](https://github.com/QuantumFractal/Data-Structures-Zoo/tree/master/1-Object-Oriented%20Programming)
+2. [Algorithm Analysis](https://github.com/QuantumFractal/Data-Structures-Zoo/tree/master/2-Algorithm%20Analysis)
+3. [Sorting](https://github.com/QuantumFractal/Data-Structures-Zoo/tree/master/3-Sorting)
+4. [Generics](https://github.com/QuantumFractal/Data-Structures-Zoo/tree/master/4-Generics)
+5. [Collections and Iterators](https://github.com/QuantumFractal/Data-Structures-Zoo/tree/master/5-Collections%20and%20Iterators)
+6. [Stack and its applications](https://github.com/QuantumFractal/Data-Structures-Zoo/tree/master/6-Stack%20and%20its%20applications)
+7. [Queue](https://github.com/QuantumFractal/Data-Structures-Zoo/tree/master/7-Queue)
+8. [Tree](https://github.com/QuantumFractal/Data-Structures-Zoo/tree/master/8-Tree)
+9. [Map](https://github.com/QuantumFractal/Data-Structures-Zoo/tree/master/9-Map)
+10. [Graphs](https://github.com/QuantumFractal/Data-Structures-Zoo/tree/master/10-Graphs)
