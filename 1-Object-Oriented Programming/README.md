@@ -1,6 +1,6 @@
 # 1: Object Oriented Programming
 
-[draw a car or object realted picture ]
+![Imgur](http://i.imgur.com/AphDgOV.png)
 
 Before we get started on object oriented programming a word of warning. Python's
 ideas about Object Oriented programming differ quite a bit from Java's. First, because
