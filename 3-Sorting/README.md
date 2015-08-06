@@ -33,3 +33,5 @@ Essentially, Quicksort picks a central value (determined various ways) to pivot 
 This pivot function is similar to Merge, except it separates all values less than the pivot
 into the "left" list and all greater than into a "right" list. Done recursively, Quicksort
 pivots the entire list then pivots sublists by halving the original list.
+
+That's pretty much it for sorting. We'll cover heapsort after trees have been covered!
