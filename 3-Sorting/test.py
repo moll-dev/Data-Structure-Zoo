@@ -80,6 +80,5 @@ class TestSortingMethods(unittest.TestCase):
         self.assertEqual(ans, test)
         self.assertEqual(pivot, pivot_ans)
 
-
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(verbosity=2)

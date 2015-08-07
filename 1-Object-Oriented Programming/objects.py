@@ -44,7 +44,3 @@ class Truck(Vehicle):
 
     def vroom(self):
         return 'Vroooooom'
-
-
-# c = Car('Ford')
-# print c
