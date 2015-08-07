@@ -4,7 +4,6 @@ import objects
 class TestObjectMethods(unittest.TestCase): 
 
 	def test_vehicle(self): 
-		print("Running 'Vehicle' Tests!")
 		self.vehicle = objects.Vehicle('Broken Skateboard')
 		self.assertEqual(self.vehicle.name, 'Broken Skateboard')
 		with self.assertRaises(NotImplementedError): 
@@ -13,7 +12,6 @@ class TestObjectMethods(unittest.TestCase):
 	 		self.vehicle.name = 'foo'
 
 	def test_car(self): 
-		print("Running 'Car' Tests!")
 		self.car = objects.Car('Saturn Ion') #RIP Saturn
 		self.assertEqual(self.car.name, 'Saturn Ion')
 		self.assertEqual(self.car.number_of_wheels, 4)
@@ -23,7 +21,6 @@ class TestObjectMethods(unittest.TestCase):
 		
 
 	def test_truck(self): 
-		print("Running 'Truck' Tests!")
 		self.truck = objects.Truck('Walmart Truck')
 		self.assertEqual(self.truck.name, 'Walmart Truck')
 		self.assertEqual(self.truck.number_of_wheels, 18)
