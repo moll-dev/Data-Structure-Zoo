@@ -2,13 +2,15 @@ import unittest
 import objects
 
 class TestObjectMethods(unittest.TestCase): 
-	#ummmm maybe I don't need to set up for these tests since they're three different vehicles
-	# def setup(self): 
-	# 	self.car = Car('Tesla')
-	# 	self.truck = Truck('')
 
 	def test_vehicle(self): 
-		pass
+		print("Running 'Vehicle' Tests!")
+		self.vehicle = objects.Vehicle('Broken Skateboard')
+		self.assertEqual(self.vehicle.name, 'Broken Skateboard')
+		with self.assertRaises(NotImplementedError): 
+			self.vehicle.vroom()
+	 	with self.assertRaises(ValueError): 
+	 		self.vehicle.name = 'foo'
 
 	def test_car(self): 
 		print("Running 'Car' Tests!")
@@ -16,6 +18,9 @@ class TestObjectMethods(unittest.TestCase):
 		self.assertEqual(self.car.name, 'Saturn Ion')
 		self.assertEqual(self.car.number_of_wheels, 4)
 		self.assertEqual(self.car.vroom(), "Put Put Put")
+		with self.assertRaises(ValueError): 
+	 		self.car.name = 'bar'
+		
 
 	def test_truck(self): 
 		print("Running 'Truck' Tests!")
@@ -23,7 +28,9 @@ class TestObjectMethods(unittest.TestCase):
 		self.assertEqual(self.truck.name, 'Walmart Truck')
 		self.assertEqual(self.truck.number_of_wheels, 18)
 		self.assertEqual(self.truck.vroom(), 'Vroooooom')
-		pass
+		with self.assertRaises(ValueError): 
+	 		self.truck.name = 'baz'
+		
 
 if __name__ == '__main__':
     unittest.main()
