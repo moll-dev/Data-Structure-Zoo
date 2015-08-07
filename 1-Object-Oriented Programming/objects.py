@@ -39,12 +39,12 @@ class Car(Vehicle):
 
 class Truck(Vehicle):
     def __init__(self,name):
-        super(Car, self).__init__(name)
+        super(Truck, self).__init__(name)
         self.number_of_wheels = 18
 
     def vroom(self):
         return 'Vroooooom'
 
 
-c = Car('Ford')
-print c
+# c = Car('Ford')
+# print c
