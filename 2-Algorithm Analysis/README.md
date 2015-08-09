@@ -13,9 +13,8 @@ def find_sequentially(arr, item):
     for value, i in enumerate(arr):
         # Check each item in the list
         if item == value:               #Runs N number of times
-            # Return its index
-            return i
-    return -1
+            return True
+    return False
 ```
 
 Let's give the number of items in the list an official name called "n". Now we'll
@@ -32,10 +31,10 @@ wrote will scale well with tons and tons of data. Now let's try adding another l
 # Also in algorithms.py
 def array_equals(a, b):
     i = 0
-    while i < n:                # This loop runs N times
+    while i < len(a):                # This loop runs N times
         flag = False
         j = 0
-        while j < n:            # This loop runs N times
+        while j < len(b):            # This loop runs N times
             if a[i] == b[j]:
                 flag = True
                 continue
@@ -70,7 +69,7 @@ def binary_search(arr, item):
         if arr[mid] == item:
             found = True
         else:
-            if item < arr[mid]
+            if item < arr[mid]:
                 back = mid - 1
             else:
                 fist = mid + 1
