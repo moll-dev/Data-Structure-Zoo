@@ -1,6 +1,6 @@
 # 2: Algorithm Analysis
 
-[put picture of times here or something]
+![Imgur](http://i.imgur.com/pL6nSPE.png)
 
 Before we get started with the fun stuff, we need to tackle some math. I'll try
 to make it as painless as possible. Let's say we've got a huge list of sorted numbers.
