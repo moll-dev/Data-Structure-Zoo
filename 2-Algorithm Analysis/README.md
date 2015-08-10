@@ -1,7 +1,5 @@
 # 2: Algorithm Analysis
 
-![Imgur](http://i.imgur.com/pL6nSPE.png)
-
 Before we get started with the fun stuff, we need to tackle some math. I'll try
 to make it as painless as possible. Let's say we've got a huge list of sorted numbers.
 Maybe a million or so. How should we find a number in that list? Well, why don't
