@@ -7,9 +7,10 @@ from now on we'll be mentioning the amoritized time next to any crucial algorith
 or methods. Sorting is used for all sorts of things! As you may well know, computers
 can collect way more information than we can process in our life times, so if we
 can programmatically sort out what we want, we'll be able to find what we really want.
-Google's PageRank is essentially a hugh sorting algorithm that helps us find cat
+Google's PageRank is essentially a huge sorting algorithm that helps us find cat
 pictures, among other things.
 
+### Simple sorts
 Starting out with the most basic types of sorting methods, we have Selection and Insertion
 sorts. Two algorithms which I most often confuse because they're so similar!
 Selection sort essentially starts at the beginning and searches the rest of the
@@ -19,6 +20,8 @@ it moves to the next number, essentially making a bubble of sorted numbers, cool
 Insertion sort works in a similar way, in that it saves its place in the array.
 However, insertion sort swaps the current item down the list until it the current
 item is bigger than the item to its left.
+
+### Recursive sorts using Divide and Conquer
 
 Unfortunately these simple sorts, while being easy to conceptualize, have a generally
 terrible average O() time of O(n^2). Let's try tackling a more complex method, such
