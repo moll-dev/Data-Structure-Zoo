@@ -2,7 +2,7 @@
 An educational repo for students looking to learn about data structures in Python.
 While this is based on a Java class, this resource will be using Python idioms.
 
-![Imgur](http://i.imgur.com/BXKHzoJ.png)
+![Imgur](http://i.imgur.com/U9hLuWg.png)
 <sup>Don't hate my drawings, I'm a computer engineer, not an artist</sup>
 
 #### Introduction
