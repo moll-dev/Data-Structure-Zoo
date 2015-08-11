@@ -63,8 +63,13 @@ shrinking!
 ### Doubly-linked lists
 Alright, let's move on to Doubly-linked lists. Since you get the gist of Singly-linked lists,
 Doubly-linked ones are easy. You just add an attribute to your node that points backwards
-to the item before it.
+to the item before it. Pretty simple right? This allows us to delete objects more easily, and
+to iterate backwards as well.
 
 ```
-    self.head->[item1]->[item2]->[item3]->None
+                 _____    _____    _____
+    self.head|->|item1|->|item2|->|item3|->None
+             |<-|_____|<-|_____|<-|_____|
 ```
+
+We'll write a new method called insert (which was purposefully left out of the Singly-Linked list)

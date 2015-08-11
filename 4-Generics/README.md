@@ -1,6 +1,6 @@
 # 4: Generics
 
-[put generic picture here]
+![Imgur](http://i.imgur.com/Va8UF2l.png?1)
 
 If you've ever used other languages you'll probably notice that Python doesn't
 have strict typing (not strong typing). For example, in Java if you had a sorting
