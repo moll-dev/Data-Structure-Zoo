@@ -72,6 +72,35 @@ class SinglyLinkedNode(object):
         self.next = None
 
 
+# DRY: We're just going to inherit this for convinence 
+class DoublyLinkedList(SinglyLinkedList):
+    def __init__(self):
+        super(DoublyLinkedList, self).__init_()
+
+    def append(self, data):
+        """ Note: The average time for append is O(n)
+            however, insertion is O(1), giving it an
+            advantage over arrays.
+        """
+        if self.head is None:
+            self.head = SinglyLinkedNode(data)
+            self.cursor = self.head
+        else:
+            node = self.head
+            # This is a common pattern with linked lists
+            while node.next is not None:
+                node = node.next
+            new_node = DoublyLinkedNode()
+            node.next = new_node
+        self.size += 1
+
+# Staying DRY!
+class DoublyLinkedNode(SinglyLinkedNode):
+    def __init__(self, data):
+        super(DoublyLinkedNode, self).__init__()
+        self.prev = None
+
+
 if __name__ == '__main__':
     test = SinglyLinkedList()
     test.append(2)

@@ -72,4 +72,6 @@ to iterate backwards as well.
              |<-|_____|<-|_____|<-|_____|
 ```
 
-We'll write a new method called insert (which was purposefully left out of the Singly-Linked list)
+We'll write a new method called insert (which was purposefully left out of the Singly-Linked list). 
+This one will insert a new node at the given index and move the references of other nodes to fit.
+

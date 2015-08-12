@@ -6,17 +6,6 @@ While this is based on a Java class, this resource will be using Python idioms.
 <br>
 Relevant xkcd
 
-#### Introduction
-First of all, congratulations! You probably just finished a tutorial or class on Python, but it left you wanting more. Your curiosity has led you to learn more about the fun things you can do in Python. This repo is meant to be a resource for those of you looking to dive into some interesting Computer Science topics.
-
-The repository is laid out in a logical order and I suggest completing it in the order prescribed. You'll learn about the basics of OOP, get into some of the math behind algorithm design and dive into the nitty gritty with Stacks, Linked-lists, and even Graphs!
-
-A note about test-driven development. Each section has a ``test.py`` file for testing my methods.
-If you're thinking about doing TDD... DO IT. JUST DO IT. If you're new to Python or
-programming in general. TDD is an excellent habit to get into there's a [great book](http://www.obeythetestinggoat.com/)
-on the subject. To summarize it in a sentence; Make failing tests, fix your code to make the tests pass,
-then refactor and repeat.
-
 #### Table of Contents
 1. [Object-oriented Programming](https://github.com/QuantumFractal/Data-Structures-Zoo/tree/master/1-Object-Oriented%20Programming)
 2. [Algorithm Analysis](https://github.com/QuantumFractal/Data-Structures-Zoo/tree/master/2-Algorithm%20Analysis)
@@ -28,3 +17,21 @@ then refactor and repeat.
 8. [Tree](https://github.com/QuantumFractal/Data-Structures-Zoo/tree/master/8-Tree)
 9. [Map](https://github.com/QuantumFractal/Data-Structures-Zoo/tree/master/9-Map)
 10. [Graphs](https://github.com/QuantumFractal/Data-Structures-Zoo/tree/master/10-Graphs)
+
+#### Introduction
+First of all, congratulations! You probably just finished a tutorial or class on Python, but it left you wanting more. Your curiosity has led you to learn more about the fun things you can do in Python. This repo is meant to be a resource for those of you looking to dive into some interesting Computer Science topics.
+The repository is laid out in a logical order and I suggest completing it in the order prescribed. You'll learn about the basics of OOP, get into some of the math behind algorithm design and dive into the nitty gritty with Stacks, Linked-lists, and even Graphs!
+
+This repo follows both [DRY (Don't Repeat Yourself)](https://en.wikipedia.org/wiki/Don't_repeat_yourself) and 
+[TDD (Test Driven Development)](https://en.wikipedia.org/wiki/Test-driven_development) principles. Each folder has it's own test.py file.
+I encourage you to try it out via ``python test.py``. Also as another exercise try modifying the objects that are being tested and break
+stuff! 
+
+#### Learing how to learn
+If you've gotten this far on your curiosity alone, awesome! This repo is laid out in a natural order, if you go out of order it might not
+make sense. Essentially, a good plan of action is to read the README.md in each folder, look over the comments in the python files,
+run the test.py file, practice using the objects in another file (using ``import sorting.py`` for example), then try making your own!
+
+If you find an error in my writing or python files feel free to create an issue, or if you're savy create a pull request with the fix.
+Thanks for reading!
+
