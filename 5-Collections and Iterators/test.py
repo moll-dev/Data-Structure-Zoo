@@ -1,0 +1,4 @@
+""" Collections test
+
+    thomasmoll.py
+"""
