@@ -11,25 +11,20 @@ class Stack(object):
     def __len__(self):
         return self.size
 
-    def __str__(self):
-        stack_str = ''
-        cursor = self.top
-        while cursor.next is not None:
-            stack_str+="|"+str(cursor.data)+"|\n"
-        stack_str+="----"
-        return stack_str
-
     def push(self, item):
         if self.top is None:
-            print 'No head'
+            print 'Added new',item
             self.top = StackNode(item)
         else:
+            print 'Added',item
             #self.top->[item1]->None
-            old_top = self.top
-            self.top = StackNode(item)
-            self.top.next = old_top
+            item1 = self.top
+            item2 = StackNode(item)
 
             #self.top->[item2]->[item1]->None
+            self.top = item2
+            item2.next = item1
+
         self.size += 1
 
     def pop(self):
@@ -57,4 +52,5 @@ s = Stack()
 s.push(42)
 s.push(21)
 
-print s
+print s.pop()
+print s.pop()
