@@ -79,7 +79,7 @@ class SinglyLinkedNode(object):
 
 class DoublyLinkedList(SinglyLinkedList):
     def __init__(self):
-        # DRY: We're just going to inherit this for convinence 
+        # DRY: We're just going to inherit this for convinence
         super(DoublyLinkedList, self).__init__()
 
     def previous(self):
@@ -116,7 +116,7 @@ class DoublyLinkedList(SinglyLinkedList):
         if self.head is None:
             self.head = DoublyLinkedNode(data)
             self.cursor = self.head
-        else:            
+        else:
             # If this insertion should be an append
             if index == self.size - 1:
                 # We've got a method for that!
@@ -126,7 +126,7 @@ class DoublyLinkedList(SinglyLinkedList):
                 print 'head'
                 #              _____   _____
                 # self.head|->|  A  | |  C  |
-                #           <-|_____| |_____|     
+                #           <-|_____| |_____|
                 a = self.head ; print 'a',a.data
                 c = DoublyLinkedNode(data)
 
@@ -179,4 +179,3 @@ if __name__ == '__main__':
 
     for node in test:
         print node,',',
-

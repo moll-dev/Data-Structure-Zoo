@@ -2,7 +2,7 @@ import unittest
 import objects
 
 """ 1: Object-Oriented Programming - TESTS
-    Testing Object Oriented Programming Examples from objects.py 
+    Testing Object Oriented Programming Examples from objects.py
     Gabby Ortman 2015
 """
 
