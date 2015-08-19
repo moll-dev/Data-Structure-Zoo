@@ -54,7 +54,8 @@ supposed to be learning, not writing enterprise code (just yet!).
 
 Let's start by making a top node, a tail node, and a size. Did you forget linked-lists
 already? Let's pull up that diagram again. I'll show you what the sequence of events
-looks like for the example that we did earlier.
+looks like for the example that we did earlier. It's a slightly modified ``append()`` 
+except we insert our new variable at the top.
 
 ```
     # push(42)
@@ -64,3 +65,8 @@ looks like for the example that we did earlier.
     self.top->[21]->[42]->None
 
 ```
+
+That way the ``self.top`` variable points to the top of our stack! If you're clever, we can
+use ``self.top`` to easily implement our ``peek()`` method. ``pop()`` is even easier, we simply
+just remove the current top value and update our ``self.top`` variable to point to the next
+value.

@@ -13,10 +13,8 @@ class Stack(object):
 
     def push(self, item):
         if self.top is None:
-            print 'Added new',item
             self.top = StackNode(item)
         else:
-            print 'Added',item
             #self.top->[item1]->None
             item1 = self.top
             item2 = StackNode(item)
@@ -38,19 +36,13 @@ class Stack(object):
             return top_data
 
     def peek(self):
-        return self.top.data
-
+        if self.top is None:
+            raise ValueError()
+        else:
+            return self.top.data
 
 class StackNode(object):
     """ Look familiar? """
     def __init__(self, item):
         self.data = item
         self.next = None
-
-
-s = Stack()
-s.push(42)
-s.push(21)
-
-print s.pop()
-print s.pop()
