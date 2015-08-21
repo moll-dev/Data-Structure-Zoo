@@ -123,11 +123,10 @@ class DoublyLinkedList(SinglyLinkedList):
                 self.append(data)
             # If a new head needs to be added
             elif index == 0:
-                print 'head'
                 #              _____   _____
                 # self.head|->|  A  | |  C  |
                 #           <-|_____| |_____|
-                a = self.head ; print 'a',a.data
+                a = self.head
                 c = DoublyLinkedNode(data)
 
                 #              _____    ______
