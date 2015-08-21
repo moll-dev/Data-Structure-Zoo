@@ -1,5 +1,8 @@
 # 1: Object Oriented Programming
 
+Note: This section has been pretty tricky to write, considering there's a lot of different skills levels reading
+this. It will be reworked in the future.
+
 ![Imgur](http://i.imgur.com/AphDgOV.png)
 
 Before we get started on object oriented programming a word of warning. Python's
