@@ -34,7 +34,7 @@ class SinglyLinkedList(object):
     """
     def __getitem__(self, index):
         if index >= self.size:
-            return IndexError()
+            raise IndexError()
         else:
             cur = self.head
             for x in xrange(index):

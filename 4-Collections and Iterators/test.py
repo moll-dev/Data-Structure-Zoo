@@ -18,6 +18,9 @@ class TestObjectMethods(unittest.TestCase):
         self.assertIsNone(self.singleLinkList.head)
         self.assertIsNone(self.singleLinkList.cursor)
 
+    def test_contains(self): 
+        pass
+
     def test_append(self): 
         self.singleLinkList.append("Cosmo") 
         self.singleLinkList.append("Allie")
