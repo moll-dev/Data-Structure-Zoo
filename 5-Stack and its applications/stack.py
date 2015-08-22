@@ -55,7 +55,9 @@ def check_parenthesis(string):
 
     for character in string:
         # Keys being the left-side brackets
+        print character,
         if character in brackets.keys():
+            print 'pushed',character
             stack.push(character)
 
         # Values being the right-side brackets
@@ -69,11 +71,13 @@ def check_parenthesis(string):
 
             except ValueError:
                 return False
+    # Make one last check that we don't have any extras
+    if stack.size != 0:
+        return False
+    else:
+        # If we've made it all the way through without incident
+        return True
 
-    # If we've made it all the way through without incident
-    return True
 
-
-print check_parenthesis('{[2333][]}')
 
 

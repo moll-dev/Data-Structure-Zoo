@@ -42,6 +42,38 @@ class TestStack(unittest.TestCase):
 
         self.assertEquals(3, test_stack.size)
 
+class TestApplications(unittest.TestCase):
+    def setUp(self):
+        pass
+
+    def test_parenthesis(self):
+        well_formed = "[{}[]]((({}[])))"
+        not_well_formed = "[[[]]())"
+
+        # WHAT IS C DOING IN THIS REPO????
+        well_formed_with_text = ''' while (!feof(autoexec))
+                                    {
+                                        if (fgets(rline, 256, autoexec))
+                                        {
+                                            if ((SUCCESS == strnicmp(tline, TAG_1, strlen(TAG_1))) ||
+                                                (SUCCESS == strnicmp(tline, TAG_2, strlen(TAG_2))))
+                                            {
+                                                if ('\n' == LAST_CHAR(rline))
+                                                      LAST_CHAR(rline) = NUL;
+                                                strcat(rline, (';' == LAST_CHAR(rline) ? "" : ";"));
+                                                strcat(strcat(rline, newdir), "\n");
+                                            }
+                                            fputs(rline, tmp);
+                                        }
+                                    }
+                                '''
+
+        not_well_formed_with_text = "if(something == foo()"
+
+        self.assertTrue(stack.check_parenthesis(well_formed))
+        self.assertFalse(stack.check_parenthesis(not_well_formed))
+        self.assertTrue(stack.check_parenthesis(well_formed_with_text))
+        self.assertFalse(stack.check_parenthesis(not_well_formed_with_text))
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
