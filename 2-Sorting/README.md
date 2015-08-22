@@ -37,4 +37,7 @@ This pivot function is similar to Merge, except it separates all values less tha
 into the "left" list and all greater than into a "right" list. Done recursively, Quicksort
 pivots the entire list then pivots sublists by halving the original list.
 
-That's pretty much it for sorting. We'll cover heapsort after trees have been covered!
+That's pretty much it for sorting. We'll cover heapsort after trees have been covered! Protip: sorting
+is a traditionally difficult thing for students to wrap their head around (I know it was for me). In order
+to become proficient, don't just write out the algorithms, work them out on a whiteboard and see how they
+move data around.

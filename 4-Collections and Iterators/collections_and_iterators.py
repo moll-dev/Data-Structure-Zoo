@@ -17,13 +17,23 @@ class SinglyLinkedList(object):
     def __iter__(self):
         return self
 
+    def __contains__(self, item):
+        if self.head is not None:
+            cur = self.head
+            while cur.next is not None:
+                if cur.data is item:
+                    return True
+                cur = cur.next
+        else:
+            return False
+
     """ Both getitem and setitem represent the magic methods
         for the object[index] and object[index] = other operations
         for linked lists they run in O(n) time making them less
         efficient than a list() for lookups
     """
     def __getitem__(self, index):
-        if index > self.size:
+        if index >= self.size:
             return IndexError()
         else:
             cur = self.head
@@ -176,5 +186,4 @@ if __name__ == '__main__':
 
     test.insert(50, 1)
 
-    for node in test:
-        print node,',',
+    print test[4]

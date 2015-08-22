@@ -50,7 +50,7 @@ runs like normal, that the inside loop makes the entire function run in O(n^2)
 time. Which is much slower than linear, given two lists of a million items or so.
 Essentially the power of N increases whenever loops are nested. However, what do
 you think the running time of two loops running one after another would be? Not
-N^2! It would be 2N because each loop is running once.
+N^2! It would be 2N because each loop is running independently of one another.
 
 Back to our item finding problem. Now that we know a bit about how this whole
 Big O thing works, let's talk about a better way to search and its running time.

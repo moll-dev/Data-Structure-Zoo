@@ -70,3 +70,26 @@ That way the ``self.top`` variable points to the top of our stack! If you're cle
 use ``self.top`` to easily implement our ``peek()`` method. ``pop()`` is even easier, we simply
 just remove the current top value and update our ``self.top`` variable to point to the next
 value.
+
+### Applications of Stack
+
+At this point you know all you need to know about stacks. You're free to move on, however, you'd be missing out
+on all the cool things that Stacks can do! First world changing application, parenthesis. Have you ever been programming
+and went to compile and it wouldn't work because you were missing a bracket? OF COURSE NOT, this is Python! It's still a
+problem that can be solved with Stacks.
+
+But first, I highly urge you to run the following in your Python interpreter:
+```python
+    >>> from __future__ import braces
+```
+
+Funny right? Alright let's look at what a "well-formed" set of parenthesis looks like. "{[(({}[]))]}" Notice how 
+every opening parenthesis has a closing one? "{{()}[]}}]}" This one just looks terrible. Now let's figure out an
+algorithm to break this problem down.
+
+We're going to first iterate over the entire parenthesis string. Easy enough, use a ``for char in string:`` and you
+should be good. Then whenever we see a parenthesis, we push it onto the stack.
+
+```python
+
+    def 
