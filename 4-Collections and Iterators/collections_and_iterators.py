@@ -4,7 +4,7 @@
 """
 
 class SinglyLinkedList(object):
-    __next__ = next # For Python 3.X compatability
+    __next__ = next # For Python 3.X compatibility
 
     def __init__(self):
         self.head = None
