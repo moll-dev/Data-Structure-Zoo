@@ -33,8 +33,8 @@ class SinglyLinkedList(object):
         efficient than a list() for lookups
     """
     def __getitem__(self, index):
-        if index >= self.size:
-            return IndexError()
+        if index >= self.size or index < 0:
+            raise IndexError()
         else:
             cur = self.head
             for x in xrange(index):
@@ -42,8 +42,8 @@ class SinglyLinkedList(object):
             return cur.data
 
     def __setitem__(self, index, value):
-        if index > self.size:
-            return IndexError()
+        if index >= self.size or index < 0:
+            raise IndexError()
         else:
             cur = self.head
             for x in xrange(index):
@@ -179,11 +179,12 @@ class DoublyLinkedNode(SinglyLinkedNode):
         self.prev = None
 
 if __name__ == '__main__':
-    test = DoublyLinkedList()
+    test = SinglyLinkedList()
     test.append(2)
     test.append(3)
     test.append(4)
 
-    test.insert(50, 1)
-
-    print test[4]
+    print test[0]
+    print test[1]
+    print test[2]
+    print test[-1]
