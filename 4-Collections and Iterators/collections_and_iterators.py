@@ -20,12 +20,11 @@ class SinglyLinkedList(object):
     def __contains__(self, item):
         if self.head is not None:
             cur = self.head
-            while cur.next is not None:
+            while cur is not None:
                 if cur.data is item:
                     return True
                 cur = cur.next
-        else:
-            return False
+        return False
 
     """ Both getitem and setitem represent the magic methods
         for the object[index] and object[index] = other operations
