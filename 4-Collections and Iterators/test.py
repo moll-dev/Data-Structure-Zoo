@@ -19,7 +19,13 @@ class TestObjectMethods(unittest.TestCase):
         self.assertIsNone(self.singleLinkList.cursor)
 
     def test_append(self): 
-        pass 
+        self.singleLinkList.append("Cosmo") 
+        self.singleLinkList.append("Allie")
+        self.singleLinkList.append("Watson the Award-Winning Betta Fish")
+        with self.assertRaises(IndexError):
+            self.singleLinkList.__getitem__(3)
+        self.singleLinkList.append("Foley")
+        self.assertEqual("Foley", self.singleLinkList.__getitem__(3))
 
     def test_getitem(self): 
         pass 
