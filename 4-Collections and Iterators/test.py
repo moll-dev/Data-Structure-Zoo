@@ -31,8 +31,10 @@ class TestObjectMethods(unittest.TestCase):
         self.assertTrue(self.singleLinkListData.__contains__("Allie"))
         self.assertTrue(self.singleLinkListData.__contains__("Watson"))
 
+    #__contains should return false if the list does not contained specified data, d u h 
     def test_contains_failure(self): 
-        pass 
+        self.assertFalse(self.singleLinkListData.__contains__("Gabby")) 
+        self.assertFalse(self.singleLinkListData.__contains__("Thomas")) 
 
     #append should add data to the end of the list
     def test_append_success(self): 
@@ -56,6 +58,7 @@ class TestObjectMethods(unittest.TestCase):
     def test_getitem_failure(self): 
         with self.assertRaises(IndexError):
             self.singleLinkListData.__getitem__(3) 
+            self.singleLinkListData.__getitem__(-3) 
 
     #__setitem__ should change the data at a given index
     def test_setitem_success(self): 
@@ -63,8 +66,11 @@ class TestObjectMethods(unittest.TestCase):
         self.singleLinkListData.__setitem__(0, "Smalls")
         self.assertEqual("Smalls", self.singleLinkListData.__getitem__(0)) 
 
+    #__setitem__ shoudl reaise an exception when trying to access an element that does not exist 
     def test_setitem_failure(self): 
-        pass
+        with self.assertRaises(IndexError): 
+            self.singleLinkListData.__setitem__(5, "Bruno")
+            self.singleLinkListData.__setitem__(-1, "Lucie")
 
     #test that a newly initated doubly linked list has size 0, null head and null cursor 
     #this shouldn't be any different from the previous test, BUT, what if inheritance was done incorectly? 
