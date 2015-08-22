@@ -27,7 +27,7 @@ This repo follows both [DRY (Don't Repeat Yourself)](https://en.wikipedia.org/wi
 I encourage you to try it out via ``python test.py``. Also as another exercise try modifying the objects that are being tested and break
 stuff!
 
-#### Learing how to learn
+#### Learning how to learn
 If you've gotten this far on your curiosity alone, awesome! This repo is laid out in a natural order, if you go out of order it might not
 make sense. Essentially, a good plan of action is to read the README.md in each folder, look over the comments in the python files,
 run the test.py file, practice using the objects in another file (using ``import sorting.py`` for example), then try making your own!
