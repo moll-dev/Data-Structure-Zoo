@@ -34,29 +34,37 @@ class TestObjectMethods(unittest.TestCase):
     def test_contains_failure(self): 
         pass 
 
-    #Append should add data to the end of the list
-    def test_append(self): 
+    #append should add data to the end of the list
+    def test_append_success(self): 
         self.assertEqual("Cosmo", self.singleLinkListData.__getitem__(0))
         self.assertEqual("Allie", self.singleLinkListData.__getitem__(1))
         self.assertEqual("Watson", self.singleLinkListData.__getitem__(2))
+    
+    #append should raise an exception when trying to 
+    def test_append_failure(self): 
         with self.assertRaises(IndexError):
             self.singleLinkListData.__getitem__(3)
         self.singleLinkListData.append("Foley")
         self.assertEqual("Foley", self.singleLinkListData.__getitem__(3))
 
     #__getitem__ should get the data at the specified index unless the specified index is out of bounds. then it should throw an exception
-    def test_getitem(self): 
+    def test_getitem_success(self): 
         self.assertEqual("Cosmo", self.singleLinkListData.__getitem__(0))
         self.assertEqual("Allie", self.singleLinkListData.__getitem__(1))
         self.assertEqual("Watson", self.singleLinkListData.__getitem__(2))
+        
+    def test_getitem_failure(self): 
         with self.assertRaises(IndexError):
             self.singleLinkListData.__getitem__(3) 
 
     #__setitem__ should change the data at a given index
-    def test_setitem(self): 
+    def test_setitem_success(self): 
         self.assertEqual("Cosmo", self.singleLinkListData.__getitem__(0))
         self.singleLinkListData.__setitem__(0, "Smalls")
         self.assertEqual("Smalls", self.singleLinkListData.__getitem__(0)) 
+
+    def test_setitem_failure(self): 
+        pass
 
     #test that a newly initated doubly linked list has size 0, null head and null cursor 
     #this shouldn't be any different from the previous test, BUT, what if inheritance was done incorectly? 
