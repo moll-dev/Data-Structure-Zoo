@@ -5,7 +5,7 @@
 Collections, or Data Structures are simply a way to store elements of the same type.
 We can establish rules as to what and how items are stored in our collection.
 Should the list have a size limit? Should it allow None objects? Are the elements ordered?
-Can elements have multiple sucessors? Should access be limited? These will all be answered in the next couple of sections.
+Can elements have multiple successors? Should access be limited? These will all be answered in the next couple of sections.
 We've already used a collection in Python called ``list()``.
 
 As we've seen with ``list()``, there are a few methods that we need when creating our own
@@ -34,7 +34,7 @@ make a new object and tell the last object to point to it.
 
 ### Iterators for Singly-Linked Lists
 How do we then use the ``for item in list:`` piece of syntactic sugar on our new list?
-We use an interator! Now currently there are 4 ways to add iterative capabilities to
+We use an iterator! Now currently there are 4 ways to add iterative capabilities to
 a collection in Python. I'll go over one of the easier for Singly-Linked lists and
 leave the more complicated one for the Doubly-Linked list. For our basic iterator method
 ``__iter__`` we simply write ``return self``. Now we can implement the ``next()`` method,

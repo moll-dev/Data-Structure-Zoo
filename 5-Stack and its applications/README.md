@@ -12,7 +12,7 @@ is the top of the stack!
 Before we jump in with some nice ASCII diagrams, let's talk functions. A Stack has
 a few simple methods that we must implement. ``push()``, ``peek()``, ``pop()``,
 ``is_empty()``, and ``__len__()``. We've seen ``__len__()`` before, and ``is_empty()``
-goes along nicely with the aformentioned. However, what's all this pushing and popping
+goes along nicely with the aforementioned. However, what's all this pushing and popping
 and peeking about? Let's first take a look at ``push()``. Imagine the stack like a
 PEZ dispenser.
 
@@ -88,8 +88,26 @@ every opening parenthesis has a closing one? "{{()}[]}}]}" This one just looks t
 algorithm to break this problem down.
 
 We're going to first iterate over the entire parenthesis string. Easy enough, use a ``for char in string:`` and you
-should be good. Then whenever we see a parenthesis, we push it onto the stack.
+should be good. Notice the ``brackets`` dictionary, we establish the relationship between opening
+and closing parenthesis. We can also iterate over both keys and values! So for each character we
+check to see if it's in the keys first, if so we push it.
+
 
 ```python
+    # See stack.py for a more commented version
+    stack = Stack()
+    brackets = {'{':'}', '[':']', '(':')'}
 
-    def 
+    for character in string:
+        if character in brackets.keys():
+            stack.push(character)
+
+        if character in brackets.values():
+            try:
+                other = stack.pop()
+                if brackets[other] != character:
+                    return False
+            except ValueError:
+                return False
+    return True
+```

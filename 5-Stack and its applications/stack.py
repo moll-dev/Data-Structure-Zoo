@@ -46,3 +46,34 @@ class StackNode(object):
     def __init__(self, item):
         self.data = item
         self.next = None
+
+
+def check_parenthesis(string):
+    stack = Stack()
+    # We're using a dict which allows us to do some fun things!
+    brackets = {'{':'}', '[':']', '(':')'}
+
+    for character in string:
+        # Keys being the left-side brackets
+        if character in brackets.keys():
+            stack.push(character)
+
+        # Values being the right-side brackets
+        if character in brackets.values():
+            try:
+                other = stack.pop()
+
+                # Check for it's pair using the dict earlier
+                if brackets[other] != character:
+                    return False
+
+            except ValueError:
+                return False
+
+    # If we've made it all the way through without incident
+    return True
+
+
+print check_parenthesis('{[2333][]}')
+
+
