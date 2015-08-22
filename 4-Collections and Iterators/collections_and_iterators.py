@@ -42,8 +42,8 @@ class SinglyLinkedList(object):
             return cur.data
 
     def __setitem__(self, index, value):
-        if index > self.size:
-            return IndexError()
+        if index >= self.size:
+            raise IndexError()
         else:
             cur = self.head
             for x in xrange(index):
