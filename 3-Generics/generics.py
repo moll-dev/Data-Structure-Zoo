@@ -6,7 +6,7 @@
 
 import random
 
-""" Here i've stolen our quick_sort implementation
+""" Here I've stolen our quick_sort implementation
 notice that I haven't modified anything to make it
 work with our fruit object. Pay close attention to
 the places in which the '<' is used.
@@ -69,7 +69,7 @@ if __name__ == '__main__':
         print str(fruit),',',
 
     print 'Sorting...'
-    # Note: This method works because we're modifiying fruit_basket
+    # Note: This method works because we're modifying fruit_basket
     # directly and not returning our sorted array.
     quick_sort(fruit_basket, 0, len(fruit_basket)-1)
 

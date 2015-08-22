@@ -71,7 +71,7 @@ is being assigned the string 'buh' using the self keyword. This member variable
 is public! Consider the following.
 
 ```python
-    obj = MyObject() # Instanciate my object
+    obj = MyObject() # Instantiate my object
     var = obj.my_member_variable
 ```
 

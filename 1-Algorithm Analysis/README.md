@@ -22,7 +22,7 @@ take a look at the function and see home many times various operations are calle
 This one is pretty simple because it uses a single ``for`` loop, thus this function
 takes N number of times to complete.
 
-The general rule of thumb is that a loop over a list will take O(n) time. The notation callled Big O that I
+The general rule of thumb is that a loop over a list will take O(n) time. The notation called Big O that I
 just used represents the average time that a function will take to complete. It's less
 of an exact measurement and more of a good approximation to see if the algorithm you
 wrote will scale well with tons and tons of data. Now let's try adding another loop!
@@ -55,7 +55,7 @@ N^2! It would be 2N because each loop is running independently of one another.
 Back to our item finding problem. Now that we know a bit about how this whole
 Big O thing works, let's talk about a better way to search and its running time.
 Enter, Binary Search, a method that uses the fact that the array is sorted to
-significantly speed up its seach process.
+significantly speed up its search process.
 
 ```python
 # See more comments in algorithms.py
@@ -78,8 +78,8 @@ def binary_search(arr, item):
 
 Can you guess what this function's running time is? Let's take a crack at it.
 There's a loop, so we can put an n down. However, if you take a look at the condition,
-it won't always be iterating through the entire list. In fact everytime an interation
+it won't always be iterating through the entire list. In fact every time an iteration
 happens the problem set is cut in half. Take the limit as n goes to infinity given ``n/(2^i)``
 and you get log(n). Making our function run in O(log(n)) time, and if you graph these
-two functions with reasonably large sets of numbers you'll se that n^2 goes to infinity
+two functions with reasonably large sets of numbers you'll see that n^2 goes to infinity
 much quicker than log(n), making this search more efficient.

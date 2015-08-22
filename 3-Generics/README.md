@@ -21,7 +21,7 @@ of strings. However, in Python you can! Consider the following:
 
 What do you think will be printed to the console? Obviously 'They're equal' won't
 be printed. But what about the next two? It's uncertain, maybe they're compared
-by length or lexigraphically. If you tried it yourself you'll see that it would
+by length or lexicographically. If you tried it yourself you'll see that it would
 print 'foo!' because the Natural Ordering of those strings puts the string 'hello'
 before 'thomas'. Natural Ordering is very important in sorting and other algorithms,
 integers are simple enough but what about comparing complex objects?
