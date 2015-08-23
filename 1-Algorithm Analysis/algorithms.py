@@ -80,6 +80,6 @@ if __name__ == '__main__':
     t2 = time.time()
     binary_search(big_o_list, item)
     t3 = time.time()
-    total = t2-t3
+    total = t3-t2
 
     print 'Found',item,'in',total,'MS'
