@@ -70,13 +70,13 @@ class TestObjectMethods(unittest.TestCase):
         self.singleLinkListData[0] = "Smalls"
         self.assertEqual("Smalls", self.singleLinkListData[0]) 
 
-    #__setitem__ shoudl reaise an exception when trying to access an element that does not exist 
+    #__setitem__ should raise an exception when trying to access an element that does not exist 
     def test_setitem_failure(self): 
         with self.assertRaises(IndexError): 
             self.singleLinkListData[5] = "Bruno"
             self.singleLinkListData[-1] = "Lucie"
 
-    #test that a newly initated doubly linked list has size 0, null head and null cursor 
+    #test that a newly initialized doubly linked list has size 0, null head and null cursor 
     def test_empty_double_list(self): 
         self.assertEqual(0, self.doubleLinkList.size)
         self.assertIsNone(self.doubleLinkList.head)

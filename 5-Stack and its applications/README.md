@@ -93,22 +93,32 @@ should be good. Notice the ``brackets`` dictionary, we establish the relationshi
 and closing parenthesis. We can also iterate over both keys and values! So for each character we
 check to see if it's in the keys first, if so we push it.
 
-
 ```python
     # See stack.py for a more commented version
-    stack = Stack()
-    brackets = {'{':'}', '[':']', '(':')'}
+    def check_parenthesis(string):
+        stack = Stack()
+        brackets = {'{':'}', '[':']', '(':')'}
+        for character in string:
+            if character in brackets.keys():
+                stack.push(character)
 
-    for character in string:
-        if character in brackets.keys():
-            stack.push(character)
+            if character in brackets.values():
+                try:
+                    other = stack.pop()
+                    if brackets[other] != character:
+                        return False
 
-        if character in brackets.values():
-            try:
-                other = stack.pop()
-                if brackets[other] != character:
+                except ValueError:
                     return False
-            except ValueError:
-                return False
-    return True
+        if stack.size != 0:
+            return False
+        else:
+            return True
 ```
+
+Don't worry if it looks intimidating! If it's a closing parenthesis, we check to see 
+that it has a matching pair on the ``Stack`` by calling ``pop()`` and using our neat
+lookup dictionary to see if it matches. That's essentially the algorithm. You'll see at
+the end of the method that we have a check to see that the stack is empty. This ensures
+that we don't have any lonely parenthesis left with no partner. 
+

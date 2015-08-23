@@ -75,5 +75,19 @@ class TestApplications(unittest.TestCase):
         self.assertTrue(stack.check_parenthesis(well_formed_with_text))
         self.assertFalse(stack.check_parenthesis(not_well_formed_with_text))
 
+    def test_postfix_eval(self):
+        eighty_eight = "5 6 + 7 4 3 - + *"
+        too_many_operands = "2 3 + 4 6 -"
+        too_many_operators = "2 3 + -"
+
+        self.assertEquals(88, stack.postfix_eval(eighty_eight))
+        with self.assertRaises(ValueError): 
+            stack.postfix_eval(too_many_operands)
+
+        with self.assertRaises(ValueError):
+            stack.postfix_eval(too_many_operands)
+
+
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)

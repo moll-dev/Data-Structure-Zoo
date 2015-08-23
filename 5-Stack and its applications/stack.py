@@ -47,7 +47,6 @@ class StackNode(object):
         self.data = item
         self.next = None
 
-
 def check_parenthesis(string):
     stack = Stack()
     # We're using a dict which allows us to do some fun things!
@@ -76,6 +75,9 @@ def check_parenthesis(string):
         # If we've made it all the way through without incident
         return True
 
+def postfix_eval(string):
+    # Stub 
+    pass
 
 
 
