@@ -61,18 +61,18 @@ significantly speed up its search process.
 # See more comments in algorithms.py
 def binary_search(arr, item):
     front = 0
-    back = len(arr)-1
+    back = len(arr) - 1
     found = False
 
-    while first <= last and not found:
-        mid = (front+back)//2
+    while front <= back and not found:
+        mid = (front + back)//2
         if arr[mid] == item:
             found = True
         else:
             if item < arr[mid]:
                 back = mid - 1
             else:
-                fist = mid + 1
+                front = mid + 1
     return found
 ```
 
