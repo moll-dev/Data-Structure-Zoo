@@ -4,7 +4,7 @@ While this is based on a Java class, this resource will be using Python idioms. 
 
 ![Imgur](http://imgs.xkcd.com/comics/python.png)
 <br>
-Relevant xkcd
+Relevant [xkcd](http://www.xkcd.com)
 
 #### Table of Contents
 0. [Object-oriented Programming](https://github.com/QuantumFractal/Data-Structures-Zoo/tree/master/0-Object-Oriented%20Programming)

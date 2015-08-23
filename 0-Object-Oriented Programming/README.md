@@ -4,6 +4,7 @@ Note: This section has been pretty tricky to write, considering there's a lot of
 this. It will be reworked in the future.
 
 ![Imgur](http://i.imgur.com/AphDgOV.png)
+[ Computer - Science. Get it? ]
 
 Before we get started on object oriented programming a word of warning. Python's
 ideas about Object Oriented programming differ quite a bit from Java's. First, because

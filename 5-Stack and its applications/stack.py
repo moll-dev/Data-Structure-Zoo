@@ -55,9 +55,7 @@ def check_parenthesis(string):
 
     for character in string:
         # Keys being the left-side brackets
-        print character,
         if character in brackets.keys():
-            print 'pushed',character
             stack.push(character)
 
         # Values being the right-side brackets

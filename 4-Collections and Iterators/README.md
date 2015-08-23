@@ -1,6 +1,6 @@
 # 5: Collections and Iterators
 
-[ put list or something idk ]
+[ put list or collection of cat plates here ]
 
 Collections, or Data Structures are simply a way to store elements of the same type.
 We can establish rules as to what and how items are stored in our collection.

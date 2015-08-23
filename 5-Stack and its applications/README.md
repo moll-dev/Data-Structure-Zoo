@@ -1,6 +1,7 @@
 # 6: Stack and its applications
 
 ![Imgur](http://i.imgur.com/vi9bS6x.jpg)
+[ Hey, a burger is a stack right?]
 
 WHEW that last section took a lot of work, didn't it? Well you've made it halfway
 through the Zoo! Now that you've conquered linked-lists let's move on to a
