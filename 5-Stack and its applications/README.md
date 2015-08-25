@@ -122,3 +122,49 @@ lookup dictionary to see if it matches. That's essentially the algorithm. You'll
 the end of the method that we have a check to see that the stack is empty. This ensures
 that we don't have any lonely parenthesis left with no partner. 
 
+Moving on to another fun application: postfix evaluation. You're familiar with infix notation
+for mathematical equations ``(2 + 3) / 5``, in post fix it's simply ``2 3 + 5 /``. The algorithm
+for evaluating a postfix can be done easily with our ``Stack`` object. The algorithm goes like
+this: We scan our string one by one, if it's a number we push it immediately onto a stack. If we 
+encounter an operator we'll pop the two items off the stack and evaluate them using the operator,
+then we'll push the value back onto the stack. Below is the source, and as always feel free to read
+the comments and break things in ``stack.py``
+
+```python
+def postfix_eval(string):
+    stack = Stack()
+    ops = {'+': lambda a, b: a + b,
+           '-': lambda a, b: a - b,
+           '*': lambda a, b: a * b, 
+           '/': lambda a, b: a / b,
+           '%': lambda a, b: a % b,
+           '^': lambda a, b: a ** b,}
+    tokens = string.split(' ') 
+
+    for character in tokens:
+        if character in ops.keys():
+            try:
+                right = stack.pop()
+                left = stack.pop()
+                result = ops[character](left, right)
+                stack.push(result)
+            except ValueError, e:
+                raise e
+        else:
+            try:
+                value = int(character)
+                stack.push(value)
+            except ValueError, e:
+                raise e
+    if stack.size > 1:
+        raise ValueError()
+    return stack.pop()
+```
+
+Before we move on to Queues, I'll note a few Pythonic things about the method above. First,
+the dictionary with our operations. It takes advantage of ``lambda``, without going into too
+much detail (that's for another repo), it allows us to map the character '+' to the actual add
+operation. If you're not familiar with the ``try: except`` statements, they're there to catch
+exceptions we raised in the stack and problems parsing characters.
+
+That's it for Stacks, now onto Queues!

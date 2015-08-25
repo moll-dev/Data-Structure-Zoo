@@ -1,6 +1,6 @@
 """ algorithms tests
+    
     thomas moll 2015
-
 """
 import unittest
 import algorithms

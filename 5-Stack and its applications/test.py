@@ -85,7 +85,7 @@ class TestApplications(unittest.TestCase):
             stack.postfix_eval(too_many_operands)
 
         with self.assertRaises(ValueError):
-            stack.postfix_eval(too_many_operands)
+            stack.postfix_eval(too_many_operators)
 
 
 

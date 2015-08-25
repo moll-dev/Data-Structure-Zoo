@@ -76,8 +76,62 @@ def check_parenthesis(string):
         return True
 
 def postfix_eval(string):
-    # Stub 
-    pass
+    ''' Here we setup a dictionary relating the characters of 
+        operations to lambda functions. It's similar to saying:
+        
+        def add(a,b):
+            return a + b
+
+        and then doing:
+
+        print add(4,5)
+        >>> 9
+
+        The add function can also be accessed via the ``operator``
+        module.
+    '''
+
+    stack = Stack()
+    ops = {'+': lambda a, b: a + b,
+           '-': lambda a, b: a - b,
+           '*': lambda a, b: a * b, 
+           '/': lambda a, b: a / b,
+           '%': lambda a, b: a % b,
+           '^': lambda a, b: a ** b,}
+
+    # Split the string into a list using spaces
+    tokens = string.split(' ') 
+
+    for character in tokens:
+        # Check if it's an operator
+        if character in ops.keys():
+            try:
+                # Get our last two values
+                right = stack.pop()
+                left = stack.pop()
+
+                # Calculate and accumulate it
+                result = ops[character](left, right)
+                stack.push(result)
+
+            # If there aren't enough operands, raise it.
+            except ValueError, e:
+                raise e
+        else:
+            # Else it's either a number or garbage
+            try:
+                # It'll raise an exception if it can't parse it.
+                value = int(character)
+                stack.push(value)
+
+            except ValueError, e:
+                raise e
+
+    # If we have too many operands or operators
+    if stack.size > 1:
+        raise ValueError()
+
+    return stack.pop()
 
 
 
