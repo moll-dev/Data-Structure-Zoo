@@ -55,11 +55,11 @@ if __name__ == '__main__':
     apple = Fruit(3, 4, 'Apple')
     orange = Fruit(7, 3, 'Orange')
 
-    # If an apple has less seeds...
+    # If an apple has fewer seeds...
     if apple < orange:
-        print 'An apple has less seeds!'
+        print 'An apple has fewer seeds!'
     if apple > orange:
-        print 'An orange has less seeds!'
+        print 'An orange has fewer seeds!'
 
     # Now let's see that sorting is unchanged
     fruit_basket = [ Fruit(random.randint(0,30), 4) for x in xrange(30)]
