@@ -83,7 +83,25 @@ class TestObjectMethods(unittest.TestCase):
         self.assertIsNone(self.doubleLinkList.cursor)
 
     def test_insert_success(self): 
-        pass 
+        #The list should look like: 
+            #COM S 228, PHIL 343, COM S 444
+        self.assertEqual("COM S 228", self.doubleLinkListData[0])
+        self.assertEqual("PHIL 343", self.doubleLinkListData[1])
+        self.assertEqual("COM S 444", self.doubleLinkListData[2])
+        self.doubleLinkListData.insert("ENGL 314", 0)
+        #Now it should look like: 
+            #ENGL 314, COM S 228, PHIL 343, COM S 444
+        self.assertEqual("ENGL 314", self.doubleLinkListData[0])
+        self.assertEqual("COM S 228", self.doubleLinkListData[1])
+        self.assertEqual("PHIL 343", self.doubleLinkListData[2])
+        self.assertEqual("COM S 444", self.doubleLinkListData[3])
+        self.doubleLinkListData.insert("MATH 207", 2)
+        #ENGL 314, COM S 228, MATH 207, #PHIL 343, #COM S 444
+        self.assertEqual("ENGL 314", self.doubleLinkListData[0])
+        self.assertEqual("COM S 228", self.doubleLinkListData[1])
+        self.assertEqual("MATH 207", self.doubleLinkListData[2])
+        self.assertEqual("PHIL 343", self.doubleLinkListData[3])
+        self.assertEqual("COM S 444", self.doubleLinkListData[4])
 
     def test_insert_fauilure(self): 
         pass 
