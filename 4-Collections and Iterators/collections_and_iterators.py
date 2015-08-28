@@ -148,7 +148,7 @@ class DoublyLinkedList(SinglyLinkedList):
             # It's between two nodes
             else:
                 a = self.head
-                for x in xrange(index):
+                for x in xrange(index - 1):
                     a = a.next
                 #  _____    _____
                 # |  A  |->|  B  |
