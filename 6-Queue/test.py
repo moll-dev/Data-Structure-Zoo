@@ -18,7 +18,7 @@ class TestQueue(unittest.TestCase):
 		q.enqueue(item1)
 		q.enqueue(item2)
 
-		self.assertEquals(item2, q.peek())
+		self.assertEquals(item1, q.peek())
 
 
 	def test_dequeue(self):
@@ -29,19 +29,22 @@ class TestQueue(unittest.TestCase):
 		q.enqueue(item1)
 		q.enqueue(item2)
 
-		self.assertEquals(item2, q.dequeue())
+		self.assertEquals(item1, q.dequeue())
 
 	def test_size(self):
 		q = queue.Queue()
 
 		item1, item2 = 'the queen', 'james bond'
-		self.assertEqual(0, q.size())
+		self.assertEqual(0, len(q))
 
 		q.enqueue(item1)
-		self.assertEqual(1, q.size())
+		self.assertEqual(1, len(q))
 
 		q.enqueue(item2)
-		self.assertEqual(2, q.size())
+		self.assertEqual(2, len(q))
+
+		q.dequeue()
+		self.assertEqual(1, len(q))
 
 	def test_peek(self):
 		q = queue.Queue()
@@ -51,7 +54,7 @@ class TestQueue(unittest.TestCase):
 		q.enqueue(item1)
 		q.enqueue(item2)
 
-		self.assertEqual(item2, q.peek())
+		self.assertEqual(item1, q.peek())
 
 	def test_clear(self):
 		q = queue.Queue()
@@ -63,7 +66,7 @@ class TestQueue(unittest.TestCase):
 
 		q.clear()
 
-		self.assertEqual(0, q.size())
+		self.assertEqual(0, len(q))
 		self.assertEqual(None, q.peek())
 
 if __name__ == '__main__':
