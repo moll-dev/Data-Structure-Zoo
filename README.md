@@ -1,5 +1,5 @@
 # Data-Structures-Zoo
-An educational repo for students looking to learn about data structures in Python.
+An educatinal repo for students looking to learn about data structures in Python.
 While this is based on a Java class, this resource will be using Python idioms. Currently 70% Done!
 
 ![Imgur](http://imgs.xkcd.com/comics/python.png)
