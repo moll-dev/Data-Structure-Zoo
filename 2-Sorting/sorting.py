@@ -27,7 +27,7 @@ def insertion_sort(arr):
         while pos > 0 and arr[pos-1] > cursor:
             # Swap the number down the list
             arr[pos] = arr[pos-1]
-            pos = pos-1
+            pos = pos - 1
         # Break and do the final swap
         arr[pos] = cursor
     return arr
@@ -52,15 +52,15 @@ def merge(left, right):
         Complexity: O(n)
     """
     arr = []
-    left_cursor, right_cursor = 0,0
+    left_cursor, right_cursor = 0, 0
     while left_cursor < len(left) and right_cursor < len(right):
         # Sort each one and place into the result
         if left[left_cursor] <= right[right_cursor]:
             arr.append(left[left_cursor])
-            left_cursor+=1
+            left_cursor += 1
         else:
             arr.append(right[right_cursor])
-            right_cursor+=1
+            right_cursor += 1
     # Add the left overs if there's any left to the result
     if left:
         arr.extend(left[left_cursor:])
